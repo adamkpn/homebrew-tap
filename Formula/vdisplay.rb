@@ -3,7 +3,7 @@ class Vdisplay < Formula
   homepage "https://github.com/adamkpn/vdisplay"
   # url and sha256 are updated by the vdisplay release workflow.
   url "https://github.com/adamkpn/vdisplay/releases/download/v0.1.0/vdisplay-0.1.0-macos-universal.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "d38eb87a4a0f9b071be82647a869dab1ac456f43b1ca78814024dea52f02cbfe"
   license "MIT"
 
   livecheck do

@@ -1,7 +1,7 @@
 cask "vdisplay" do
   # version and sha256 are updated by the vdisplay release workflow.
   version "0.2.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "f8990076d0b07d37016f6e117ec2ce01334b46c0bab560ad8012937507868ecd"
 
   url "https://github.com/adamkpn/vdisplay/releases/download/v#{version}/vdisplay-#{version}-macos-app.zip"
   name "vdisplay"

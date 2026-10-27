@@ -14,14 +14,30 @@ class Vdisplay < Formula
   depends_on :macos
 
   def install
-    bin.install "vdisplay"
+    if File.directory?("vdisplay.app")
+      # The CLI is the menu bar app's own executable, so both share one binary.
+      prefix.install "vdisplay.app"
+      bin.install_symlink prefix/"vdisplay.app/Contents/MacOS/vdisplay"
+    else
+      # Releases before the menu bar app ship the binary only.
+      bin.install "vdisplay"
+    end
   end
 
   def caveats
     <<~EOS
-      vdisplay moves other apps' windows, so your terminal needs Accessibility
-      permission (System Settings > Privacy & Security > Accessibility).
-      `--view` also needs Screen Recording permission for the terminal.
+      The menu bar app is installed as:
+        #{opt_prefix}/vdisplay.app
+      Open it with `open #{opt_prefix}/vdisplay.app`, or start it now and at
+      every login with `vdisplay service install`. After `brew upgrade`, quit it
+      and open it again.
+
+      The menu bar app asks for Accessibility, and Screen Recording for showing
+      the display in a window, for vdisplay.app. The `vdisplay` command run from
+      a terminal needs them for your terminal instead.
+
+      The vdisplay cask (`brew install --cask adamkpn/tap/vdisplay`) installs the
+      same app into /Applications. Install one or the other, not both.
     EOS
   end
 

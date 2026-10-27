@@ -2,8 +2,8 @@ class Vdisplay < Formula
   desc "Run any macOS app on a virtual display of any resolution"
   homepage "https://github.com/adamkpn/vdisplay"
   # url and sha256 are updated by the vdisplay release workflow.
-  url "https://github.com/adamkpn/vdisplay/releases/download/v0.2.0/vdisplay-0.2.0-macos-universal.tar.gz"
-  sha256 "0240f564074bfbb842b9d7c7c6c1bc483c2fb658de5a9d2df4cc85edab458ab4"
+  url "https://github.com/adamkpn/vdisplay/releases/download/v0.2.1/vdisplay-0.2.1-macos-universal.tar.gz"
+  sha256 "2952b5f02fa052f2b9280bd7a3ab588cb7a87bf272f29d63f426954bae7131cf"
   license "MIT"
 
   livecheck do
